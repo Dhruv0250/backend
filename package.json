@@ -1,0 +1,28 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "basics of backend",
+  "keywords": [
+    "node",
+    "backend"
+  ],
+  "homepage": "https://github.com/Dhruv0250/backend#readme",
+  "bugs": {
+    "url": "https://github.com/Dhruv0250/backend/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dhruv0250/backend.git"
+  },
+  "license": "ISC",
+  "author": "Dhruv",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "dotenv": "^17.4.1",
+    "express": "^5.2.1"
+  }
+}
