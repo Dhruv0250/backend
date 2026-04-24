@@ -1,47 +1,44 @@
-const express = require('express')
-const cors = require('cors');
+const express = require('express');
 
 const app = express();
 
-app.use(cors());
-
-// app.get('/',(req,res)=>{
-//     res.send("this is backend")
-// });
+app.get('/',(req,res)=>{
+res.send("server is ready")
+})
 
 app.get('/api/jokes',(req,res)=>{
-    const jokes =[
+    const jokes=[
         {
             id:1,
-            title:"Why did the scarecrow win an award?",
-            content:"Because he was outstanding in his field!"
+            title:"joke 1",
+            content:"this is joke 1"    
         },
         {
-            id:2,
-            title:"Why don't scientists trust atoms?",
-            content:"Because they make up everything!"
-        },
-            {
+            id:2,   
+            title:"joke 2",
+            content:"this is joke 2"
+        },{
             id:3,
-            title:"Why did the bicycle fall over?",
-            content:"Because it was two-tired!"
-            },
+            title:"joke 3",
+            content:"this is joke 3"
+        },
         {
-            id:4,   
-            title:"Why did the tomato turn red?",   
-            content:"Because it saw the salad dressing!"
+            id:4,
+            title:"joke 4",
+            content:"this is joke 4"
         },
         {
             id:5,
-            title:"Why did the math book look sad?",
-            content:"Because it had too many problems!"
+            title:"joke 5",
+            content:"this is joke 5"
         }
-    ];
-    res.send(jokes);
-});
+    ]
+    res.json(jokes)
 
-const port = process.env.PORT || 3000;
+})
+
+const port=process.env.PORT || 3000;
 
 app.listen(port,()=>{
-    console.log(`server is listening on https://localhost${port}`)
+console.log(`serve at https://localhost:${port}`)
 })
